@@ -1,24 +1,37 @@
-# README
+# Fashion（仮）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+ファッションコーディネート投稿サイト
 
-Things you may want to cover:
+### サイトテーマ
+おしゃれを身近に。
 
-* Ruby version
+### テーマを選んだ理由
+自分自身服が好きで、他人のコーディネートを見ることが好きです。
+また、今自分の持っている服をweb上で管理したいと思っていました。コーディネートの保存と服の管理を一緒にできるサービスはいまだであったことがないからです。
 
-* System dependencies
+### ターゲットユーザ
+男女問わず、服、おしゃれが好きな一般ユーザー（主に若者）
 
-* Configuration
+### 主な利用シーン
+・コーディネート投稿、閲覧機能により毎日のコーディネートのヒントに。
+・服管理機能により自身の持っている服が一目でチェックできる！ショッピングの参考に！
 
-* Database creation
+## 設計書
+ER図
+テーブル定義書
+アプリケーション詳細設計
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1xx36oDecUOGi8M8EqR5zS2VfOAT34Rydpv32lokXpUE/edit#gid=566224576
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
