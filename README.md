@@ -32,9 +32,9 @@
 - 服管理機能により自身の持っている服が一目でチェックできるため、ショッピングの参考にしたいとき。
 
 ## 設計書
-- ER図
-- テーブル定義書
-- アプリケーション詳細設計
+- ER図:https://app.diagrams.net/#G1Xg5cSmZbOVOsqzc7TLc8p2F-7l2yTkJE
+- テーブル定義書:https://docs.google.com/spreadsheets/d/1OY0_elD6aRJYFZ_3fD3nmzyawMIjZmLsmgdspFDLuss/edit#gid=1373217982
+- アプリケーション詳細設計:https://docs.google.com/spreadsheets/d/169gOUTS6ocabmj4GEcTsOv9h7QMur80nYPH4MQFO8Xo/edit#gid=2133469642
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1xx36oDecUOGi8M8EqR5zS2VfOAT34Rydpv32lokXpUE/edit?usp=sharing
