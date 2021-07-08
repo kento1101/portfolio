@@ -10,23 +10,40 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-    <li>
-     <%=  link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    </li> 
-    <%  else %>    
-    <li>
-     <%=  link_to "新規登録", new_user_registration_path %>
-    </li> 
-    
-    <li>
-     <%=  link_to "ログイン", new_user_session_path %>
-    </li> 
-    
 
-    
-    <% end %>
-    
+    <header>
+              <% if user_signed_in? %>
+            <ul>
+              <li>
+               <%= link_to "スタイル一覧", about_path %>
+              </li>
+              <li>
+               <%= link_to "クローゼット", about_path %>
+              </li>
+
+              <li>
+               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+
+            <% else %>
+             <ul>
+              <li>
+                <%= link_to "About", about_path %>
+              </li>
+
+               <li>
+                 <%= link_to "Sign up", new_user_registration_path %>
+               </li>
+               <li>
+                 <%= link_to "Log in", new_user_session_path %>
+               </li>
+             </ul>
+            <% end %>
+    </header>
+
     <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>
