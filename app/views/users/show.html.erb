@@ -1,1 +1,32 @@
-<h3>会員情報詳細ページ</h3>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+      <h1>マイページ</h1>
+      <h2 style="display:inline-block">登録情報</h2>
+      <div class="btn">
+        <%= link_to '編集する', about_path,class: "btn  btn-outline-secondary" %>
+      </div>
+
+      <table class="table table-striped">
+        <tr>
+         <th>名前</th><td><%=@user.name %></td>
+        </tr>
+
+
+
+        <tr>
+         <th>メールアドレス</th><td><%= @user.email %></td>
+        </tr>
+       </table>
+
+
+      </div>
+    <div class="col-md-2"></div>
+
+  </div>
+</div
