@@ -9,7 +9,7 @@
       <h1>マイページ</h1>
       <h2 style="display:inline-block">登録情報</h2>
       <div class="btn">
-        <%= link_to '編集する', about_path,class: "btn  btn-outline-secondary" %>
+        <%= link_to '編集する', edit_user_path(@user.id),class: "btn  btn-outline-secondary" %>
       </div>
 
       <table class="table table-striped">
