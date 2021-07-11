@@ -1,0 +1,15 @@
+<h3>Style編集</h3>
+
+<%= form_with model:@style, url:"/styles/#{@style.id}", local:true do |f| %>
+
+<h4>名前</h4>
+<%= f.text_field :name %>
+
+
+<h4>詳細</h4>
+<%= f.text_area :detail %>
+
+<%= f.submit '変更を保存' %>
+
+
+<% end %>

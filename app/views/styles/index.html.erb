@@ -1,0 +1,18 @@
+<h3>スタイル一覧</h3>
+<% @styles.each do |style| %>
+
+
+<%= attachment_image_tag style, :image, :fill, 100, 100, format: 'jpeg' %>
+
+
+<p>アイテム名</p>
+<%= link_to style_path(style) do %>
+<%= style.name %>
+<% end %>
+
+<p>詳細</p>
+<%= style.detail %>
+
+<p><%= link_to "#{style.comments.count}コメント", style_path(style.id)  %></p>
+
+<% end %>

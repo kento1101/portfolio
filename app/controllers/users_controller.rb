@@ -17,6 +17,14 @@ def update
   end
 end
 
+def alert
+   @user = User.find(params[:id])
+end
+
+def withdraw
+end
+
+
 private
 
 def user_params

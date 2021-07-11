@@ -6,6 +6,7 @@ end
 
 def create
      item = Item.new(item_params)
+     item.user_id = current_user.id
   if item.save
     redirect_to item_path(item.id)
   else
@@ -14,7 +15,7 @@ def create
 end
 
 def index
-  @items = Item.all
+  @my_items = current_user.items
 
 end
 

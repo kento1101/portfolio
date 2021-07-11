@@ -1,16 +1,16 @@
 <h3>アイテム一覧</h3>
-<% @items.each do |item| %>
+<% @my_items.each do |item| %>
 
 
 <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
 
 
 <p>アイテム名</p>
-
+<%= link_to item_path(item) do %>
 <%= item.name %>
+<% end %>
 
 <p>詳細</p>
-
 <%= item.detail %>
 
 <% end %>

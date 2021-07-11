@@ -1,0 +1,44 @@
+<h3>スタイル詳細</h3>
+
+
+<%= attachment_image_tag @style, :image, format: 'jpeg', size:"300x300" %>
+
+
+<%= @style.name %>
+
+<p>詳細</p>
+
+<%= @style.detail %>
+
+
+<div class="comments">
+  <p>コメント件数:<%= @style.comments.count %></p>
+  <% @style.comments.each do |comment| %>
+   <p>ユーザー画像</p>
+   <%= comment.user.name %>
+   <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.body %>
+
+  <% if comment.user == current_user %>
+  <div class="comment-delete">
+    <%= link_to "削除", style_comment_path(comment.style, comment), method: :delete %>
+  </div>
+  <% end %>
+
+  <% end %>
+</div>
+
+<div class="new-comment">
+ <%= form_with(model: [@style,@comment], local: true) do |f| %>
+   <%= f.text_area :body, rows:'5', placeholder: "コメントをここに" %>
+   <%= f.submit "送信する" %>
+  <% end %>
+
+</div>
+
+
+
+<% if @style.user_id == current_user.id  %>
+<%= link_to "編集", edit_item_path(@style.id) %>
+<%= link_to "削除", style_path(@style.id), method: :delete %>
+<% else %>
+<% end %>
