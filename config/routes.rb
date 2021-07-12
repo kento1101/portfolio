@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   get "about" => "homes#about"
 
-   resources :users, only: [:edit,:update, :show]
+   resources :users, only: [:edit,:update, :show] do
+    resource :relationships, only: [:create, :destroy]
+    get 'followings' => 'relationships#followings', as: 'followings'
+    get 'followers' => 'relationships#followers', as: 'followers'
+   end
 
     get "users/:id/alert" => "users#alert"
     patch "users/:id/withdraw" => "users#withdraw"

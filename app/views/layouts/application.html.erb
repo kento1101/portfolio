@@ -22,12 +22,12 @@
               <li class="nav-item col-md-3">
                <%= link_to "Styles", styles_path, class: "menu"  %>
               </li>
-              <li  class="nav-item col-md-3">
-               <%= link_to "Closet", items_path, class: "menu"  %>
+              <li  class="nav-item col-md-4">
+               <%= link_to "MyCloset", items_path, class: "menu"  %>
               </li>
 
-              <li  class="nav-item col-md-6">
-               <%= link_to "Log out", destroy_user_session_path, class: "menu", method: :delete %>
+              <li  class="nav-item col-md-4">
+               <%= link_to "LogOut", destroy_user_session_path, class: "menu", method: :delete %>
               </li>
               </div>
             </ul>
@@ -40,10 +40,10 @@
               </li>
 
                <li  class="nav-item  col-md-5">
-                 <%= link_to "Sign up", new_user_registration_path, class: "menu" %>
+                 <%= link_to "SignUp", new_user_registration_path, class: "menu" %>
                </li>
                <li  class="nav-item col-md-4">
-                 <%= link_to "Log in", new_user_session_path, class: "menu" %>
+                 <%= link_to "LogIn", new_user_session_path, class: "menu" %>
                </li>
                </div>
              </ul>

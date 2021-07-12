@@ -20,10 +20,11 @@
 
 body {
   font-family: Miryo;
+  background-color: antiquewhite;
 }
 
 header {
-  border-bottom: solid lightgray;
+  border-bottom: solid white;
 }
 
 .leftcolor-blue {
@@ -49,7 +50,7 @@ header {
 footer {
   width: 100%;
   position: absolute;
-  border-top: solid lightgray;
+  border-top: solid white;
   bottom: 0;
   font-weight: bold;
   color: darkviolet;
