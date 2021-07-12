@@ -12,41 +12,50 @@
   <body>
 
     <header>
-        <nav class="navbar navbar-light bg-secondary justify-content-end">
+    <div class="container">
+
+
+        <nav class="navbar navbar-light  justify-content-end">
               <% if user_signed_in? %>
             <ul class="navbar-nav">
-              <li class="nav-item">
-               <%= link_to "スタイル一覧", styles_path %>
+                 <div class="row">
+              <li class="nav-item col-md-3">
+               <%= link_to "Styles", styles_path, class: "menu"  %>
               </li>
-              <li  class="nav-item">
-               <%= link_to "クローゼット", items_path %>
+              <li  class="nav-item col-md-3">
+               <%= link_to "Closet", items_path, class: "menu"  %>
               </li>
 
-              <li  class="nav-item">
-               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+              <li  class="nav-item col-md-6">
+               <%= link_to "Log out", destroy_user_session_path, class: "menu", method: :delete %>
               </li>
+              </div>
             </ul>
 
             <% else %>
              <ul class="navbar-nav">
-              <li  class="nav-item">
-                <%= link_to "About", about_path %>
+                 <div class="row">
+              <li  class="nav-item col-md-3">
+                <%= link_to "About", about_path, class: "menu" %>
               </li>
 
-               <li  class="nav-item">
-                 <%= link_to "Sign up", new_user_registration_path %>
+               <li  class="nav-item  col-md-5">
+                 <%= link_to "Sign up", new_user_registration_path, class: "menu" %>
                </li>
-               <li  class="nav-item">
-                 <%= link_to "Log in", new_user_session_path %>
+               <li  class="nav-item col-md-4">
+                 <%= link_to "Log in", new_user_session_path, class: "menu" %>
                </li>
+               </div>
              </ul>
             <% end %>
         </nav>
+
+        </div>
     </header>
 
     <%= yield %>
     <footer>
-        <p class="text-center bg-secondary text-light">Footer</p>
+        <p class="text-center">Footer</p>
     </footer>
   </body>
 </html>

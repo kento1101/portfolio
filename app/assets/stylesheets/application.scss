@@ -16,3 +16,41 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+
+body {
+  font-family: Miryo;
+}
+
+header {
+  border-bottom: solid lightgray;
+}
+
+.leftcolor-blue {
+  padding-left: 10px;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #6495ED;
+
+}
+
+.menu {
+  font-size: 20px;
+  font-weight: bold;
+  color: darkviolet;
+}
+
+.heading {
+  color: darkviolet;
+  text-align: center;
+
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  border-top: solid lightgray;
+  bottom: 0;
+  font-weight: bold;
+  color: darkviolet;
+}
