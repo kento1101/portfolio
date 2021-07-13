@@ -7,18 +7,21 @@
         <%= link_to 'ユーザー情報', user_path(current_user.id), class: "btn btn-outline-secondary" %>
 </div>
 
+
+ <div class="d-flex flex-wrap justify-content-center">
 <% @my_items.each do |item| %>
 
 
-<%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
+<%= attachment_image_tag item, :image, :fill, 200, 200, format: 'png' %>
 
+<div>
 
-<p>アイテム名</p>
 <%= link_to item_path(item) do %>
 <%= item.name %>
 <% end %>
-
-<p>詳細</p>
 <%= item.detail %>
+</div>
 
 <% end %>
+
+</div>

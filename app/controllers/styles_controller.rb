@@ -40,7 +40,7 @@ end
 def destroy
    style = Style.find(params[:id])
    style.destroy
-   redirect_to style_path
+   redirect_to styles_path
 end
 
 

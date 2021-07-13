@@ -14,6 +14,8 @@ has_many :relationships, class_name: "Relationship", foreign_key: "following_id"
 has_many :followings, through: :"relationships", source: :followed
 has_many :followers, through: :"reverse_of_relationships", source: :follower
 
+ attachment :image
+
 
 def follow(user_id)
   relationships.create(followed_id: user_id)
