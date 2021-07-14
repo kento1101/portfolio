@@ -1,18 +1,40 @@
 <h3 class="heading">Styles</h3>
-<% @styles.each do |style| %>
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-1"></div>
+
+ <div class="d-flex flex-wrap justify-content-around col-md-10">
+<% @all_ranks.each do |style| %>
 
 
-<%= attachment_image_tag style, :image, format: 'png', size:"300x300" %>
-
-
-<p>アイテム名</p>
+<div>
 <%= link_to style_path(style) do %>
-<%= style.name %>
+<%= attachment_image_tag style, :image, format: 'jpeg', size:"150x150" %>
 <% end %>
-
-<p>詳細</p>
-<%= style.detail %>
-
 <p><%= link_to "#{style.comments.count}コメント", style_path(style.id)  %></p>
 
+ <%if style.favorited_by?(current_user) %>
+  <p>
+    <%= link_to style_favorites_path(style), method: :delete do %>
+    ♥<%= style.favorites.count %>いいね
+    <%  end %>
+  </p>
+  <% else %>
+   <p>
+    <%= link_to style_favorites_path(style), method: :post do %>
+    ♡<%= style.favorites.count %>いいね
+    <%  end %>
+  </p>
+  <% end %>
+ </div>
+
 <% end %>
+</div>
+
+<div class="col-md-1"></div>
+
+
+</div>
+</div>

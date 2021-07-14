@@ -1,14 +1,19 @@
+<div class="container">
 <h3 class="heading">スタイル詳細</h3>
 
 
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-3">
 <%= attachment_image_tag @style, :image, format: 'jpeg', size:"300x300" %>
+</div>
 
 
-<%= @style.name %>
+<div class="col-md-3 mt-5">
 
-<p>詳細</p>
+<div style="display:block"><h4><%= @style.name %></h4></div>
 
-<%= @style.detail %>
+<div style="display:block"><h5><%= @style.detail %></h5></div>
 
   <%if @style.favorited_by?(current_user) %>
   <p>
@@ -44,11 +49,6 @@
 </div>
 
 
-
-
-
-
-
 <div class="new-comment">
  <%= form_with(model: [@style,@comment], local: true) do |f| %>
    <%= f.text_area :body, rows:'5', placeholder: "コメントをここに" %>
@@ -59,7 +59,16 @@
 
 
 <% if @style.user_id == current_user.id  %>
-<%= link_to "編集", edit_item_path(@style.id) %>
+<%= link_to "編集", edit_style_path(@style.id) %>
 <%= link_to "削除", style_path(@style.id), method: :delete %>
 <% else %>
 <% end %>
+
+</div>
+
+<div class="col-md-3"></div>
+
+</div>
+
+
+</div>

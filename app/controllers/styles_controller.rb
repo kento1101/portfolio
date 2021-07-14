@@ -15,7 +15,8 @@ def create
 end
 
 def index
-  @styles = Style.all
+  @all_ranks = Style.find(Favorite.group(:style_id).order('count(style_id) desc').limit(4).pluck(:style_id))
+
 
 end
 
