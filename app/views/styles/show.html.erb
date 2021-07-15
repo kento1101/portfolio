@@ -15,22 +15,10 @@
 
 <div style="display:block"><h5><%= @style.detail %></h5></div>
 
-  <%if @style.favorited_by?(current_user) %>
-  <p>
-    <%= link_to style_favorites_path(@style), method: :delete do %>
-    ♥<%= @style.favorites.count %>いいね
-    <%  end %>
-  </p>
-  <% else %>
-   <p>
-    <%= link_to style_favorites_path(@style), method: :post do %>
-    ♡<%= @style.favorites.count %>いいね
-    <%  end %>
-  </p>
-  <% end %>
 
 
 
+<div class="favorite-btn"> <%= render 'favorite-btn', style: @style %></div>
 
 <div class="comments">
   <p>コメント件数:<%= @style.comments.count %></p>
