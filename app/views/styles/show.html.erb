@@ -18,7 +18,7 @@
 
 
 
-<div class="favorite-btn"> <%= render 'favorite-btn', style: @style %></div>
+<div class="favorite-btn"><%= render partial: 'favorites/favorite', locals: { style: @style } %></div>
 
 <div class="comments">
   <p>コメント件数:<%= @style.comments.count %></p>

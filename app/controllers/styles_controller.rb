@@ -7,17 +7,15 @@ end
 def create
      style = Style.new(style_params)
      style.user_id = current_user.id
-  if style.save
-    redirect_to style_path(style.id)
-  else
-    render new
-  end
+    if style.save
+        redirect_to style_path(style.id)
+    else
+        render new
+    end
 end
 
 def index
   @all_ranks = Style.find(Favorite.group(:style_id).order('count(style_id) desc').pluck(:style_id))
- 
-
 end
 
 def show

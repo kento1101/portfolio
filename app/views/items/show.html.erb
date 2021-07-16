@@ -1,29 +1,23 @@
 <div class="container">
-<h3 class="heading">アイテム詳細</h3>
+    <h3 class="heading">アイテム詳細</h3>
 
-<div class="row">
-<div class="col-md-3"></div>
-<div class="col-md-3">
-<%= attachment_image_tag @item, :image, format: 'png', size: "300x300" %>
-</div>
+    <div class="row">
+        <div class="col-md-3"></div>
 
+        <div class="col-md-3">
+            <%= attachment_image_tag @item, :image, format: 'png', size: "300x300" %>
+        </div>
 
-<div class="col-md-3 mt-5">
-<div style="display:block"><h4><%= @item.name %></h4></div>
+        <div class="col-md-3 mt-5 text-center">
+            <div style="display:block"><h4><%= @item.name %></h4></div>
+            <div style="display:block"><h5><%= @item.detail %></h5></div>
 
+            <div class="mt-5">
+                <%= link_to "Edit", edit_item_path(@item.id), class: "btn  btn-outline-secondary" %>
+                <%= link_to "Delete", item_path(@item.id), method: :delete,class: "btn  btn-outline-secondary" %>
+            </div>
+        </div>
 
-<div style="display:block"><h5><%= @item.detail %></h5></div>
-
-
-<div class="mt-5">
-<%= link_to "Edit", edit_item_path(@item.id), class: "btn  btn-outline-secondary" %>
-<%= link_to "Delete", item_path(@item.id), method: :delete,class: "btn  btn-outline-secondary" %>
-</div>
-
-</div>
-
-<div class="col-md-3"></div>
-
-</div>
-
+        <div class="col-md-3"></div>
+    </div>
 </div>

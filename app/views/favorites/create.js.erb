@@ -1,1 +1,1 @@
-$("#style_<%= @style.id %>.favorite-btn").html("<%= j(render 'favorites/favorite-btn', style: @style) %>");
+$("#style_<%= @style.id %>.favorite-btn").html("<%= j(render 'styles/favorite-btn', locals: {style: @style}) %>");

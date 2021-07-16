@@ -2,33 +2,34 @@ class UsersController < ApplicationController
 
   def show
    @user = User.find(params[:id])
+   @styles = @user.styles
   end
 
   def edit
     @user = User.find(params[:id])
   end
 
-def update
-   user = User.find(params[:id])
-  if user.update(user_params)
-    redirect_to user_path(user.id)
-  else
-    render edit
+  def update
+    user = User.find(params[:id])
+    if user.update(user_params)
+     redirect_to user_path(user.id)
+    else
+     render edit
+    end
   end
-end
 
-def alert
+  def alert
    @user = User.find(params[:id])
-end
+  end
 
-def withdraw
-end
+  def withdraw
+  end
 
 
 private
 
-def user_params
-  params.require(:user).permit(:name, :email, :introduction, :image)
-end
+  def user_params
+    params.require(:user).permit(:name, :email, :introduction, :image)
+  end
 
 end
