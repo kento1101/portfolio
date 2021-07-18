@@ -39,6 +39,10 @@
        <div class="btn">
         <%= link_to '編集する', edit_user_path(@user.id),class: "btn  btn-outline-secondary" %>
        </div>
+
+       <div class="btn">
+        <%= link_to '退会する', alert_path, class: "btn btn-outline-secondary" %>
+</div>
     </div>
 
    <% else %>

@@ -12,8 +12,9 @@ Rails.application.routes.draw do
     get 'followers' => 'relationships#followers', as: 'followers'
    end
 
-    get "users/:id/alert" => "users#alert"
-    patch "users/:id/withdraw" => "users#withdraw"
+    get "users/:id/alert" => "users#alert", as: 'alert'
+    patch "users/:id/withdraw" => "users#withdraw", as: 'withdraw'
+
 
    resources :items
 

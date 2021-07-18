@@ -23,6 +23,10 @@ class UsersController < ApplicationController
   end
 
   def withdraw
+      @user = User.find(params[:id])
+      @user.update(is_valid: false)
+      reset_session
+      redirect_to root_path
   end
 
 
