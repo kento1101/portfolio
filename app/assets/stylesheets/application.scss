@@ -20,11 +20,13 @@
 
 body {
   font-family: Miryo;
-  background-color: antiquewhite;
+  background-color: white;
 }
 
 header {
   border-bottom: solid white;
+  background-color: steelblue;
+  height: 70px;
 }
 
 .leftcolor-blue {
@@ -38,11 +40,11 @@ header {
 .menu {
   font-size: 20px;
   font-weight: bold;
-  color: darkviolet;
+  color: white;
 }
 
 .heading {
-  color: darkviolet;
+  color: steelblue;
   text-align: center;
 
 }

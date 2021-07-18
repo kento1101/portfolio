@@ -4,7 +4,7 @@
     <title>Portfolio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+ <script src="https://kit.fontawesome.com/fad7ba032c.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,14 +20,14 @@
             <ul class="navbar-nav">
                  <div class="row">
               <li class="nav-item col-md-3">
-               <%= link_to "Styles", styles_path, class: "menu"  %>
+               <%= link_to "Styles", styles_path, class: "menu fas fa-tshirt"  %>
               </li>
               <li  class="nav-item col-md-4">
-               <%= link_to "MyCloset", items_path, class: "menu"  %>
+               <%= link_to "MyCloset", items_path, class: "menu fas fa-door-closed" %>
               </li>
 
               <li  class="nav-item col-md-4">
-               <%= link_to "LogOut", destroy_user_session_path, class: "menu", method: :delete %>
+               <%= link_to "LogOut", destroy_user_session_path, class: "menu fas fa-sign-out-alt", method: :delete %>
               </li>
               </div>
             </ul>
@@ -36,14 +36,14 @@
              <ul class="navbar-nav">
                  <div class="row">
               <li  class="nav-item col-md-3">
-                <%= link_to "About", about_path, class: "menu" %>
+                <%= link_to "About", about_path, class: "menu far fa-lightbulb" %>
               </li>
 
                <li  class="nav-item  col-md-5">
-                 <%= link_to "SignUp", new_user_registration_path, class: "menu" %>
+                 <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
                </li>
                <li  class="nav-item col-md-4">
-                 <%= link_to "LogIn", new_user_session_path, class: "menu" %>
+                 <%= link_to "LogIn", new_user_session_path, class: "menu fas fa-sign-in-alt" %>
                </li>
                </div>
              </ul>

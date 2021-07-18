@@ -1,31 +1,37 @@
-<h1>フォロワー一覧</h1>
+<div class="container">
+  <div class="row">
 
-<table class='table table-hover table-inverse'>
-<thead>
-    <tr>
-      <th>images</th>
-      <th>name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      </tr>
-  </thead>
+  <div class="col-md-1"></div>
 
-  <tbody>
-<% @users.each do |user| %>
-<tr>
-  <hr>
-  <td><%= link_to user_path(user) do %>
-          <%= attachment_image_tag user, :image, :fill, 50, 50, fallback: "no-image-icon.jpg" %>
-          <% end %>
+  <div class="col-md-10">
+    <h3 class="heading">フォロワー</h3>
+    <table class='table table-hover table-inverse'>
+      <thead>
+        <tr>
+          <th>images</th>
+          <th>name</th>
+          <th></th>
+          <th></th>
+        </tr>
+     </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user_path(user) do %>
+            <%= attachment_image_tag user, :image, :fill, 50, 50, fallback: "no-image-icon.jpg" %>
+            <% end %>
         </td>
-        <td><%=  user.name %></td>
-  <td>フォロー数： </td>
-   <td>フォロワー数： </td>
-    <td><%= link_to 'Show', user_path(user), class: "user_#{user.id}" %></td>
+        <td><%= link_to user_path(user) do %><%=  user.name %><% end %></td>
+        <td>フォロー数： </td>
+        <td>フォロワー数： </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
 
+  <div class="col-md-1"></div>
 
-    </tr>
-<% end %>
-  </tbody>
-</table>
+ </div>
+</div>

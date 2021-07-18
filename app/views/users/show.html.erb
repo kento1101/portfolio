@@ -36,13 +36,11 @@
 
        </table>
 
-       <div class="btn">
-        <%= link_to '編集する', edit_user_path(@user.id),class: "btn  btn-outline-secondary" %>
-       </div>
 
-       <div class="btn">
-        <%= link_to '退会する', alert_path, class: "btn btn-outline-secondary" %>
-</div>
+           <div><%= link_to '', edit_user_path(@user),class: "btn btn-outline-secondary btn-block fas fa-user-cog edit_user_#{@user.id}" %></div>
+
+
+
     </div>
 
    <% else %>
