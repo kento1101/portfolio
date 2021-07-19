@@ -15,10 +15,11 @@
     <div class="container">
 
 
-        <nav class="navbar navbar-light  justify-content-end">
+
+        <nav class="navbar navbar-light  justify-content-end pt-4">
               <% if user_signed_in? %>
-            <ul class="navbar-nav">
-                 <div class="row">
+             <ul class="navbar-nav">
+               <div class="row">
               <li class="nav-item col-md-3">
                <%= link_to "Styles", styles_path, class: "menu fas fa-tshirt"  %>
               </li>
@@ -29,7 +30,7 @@
               <li  class="nav-item col-md-4">
                <%= link_to "LogOut", destroy_user_session_path, class: "menu fas fa-sign-out-alt", method: :delete %>
               </li>
-              </div>
+                </div>
             </ul>
 
             <% else %>
@@ -49,7 +50,6 @@
              </ul>
             <% end %>
         </nav>
-
         </div>
     </header>
 
