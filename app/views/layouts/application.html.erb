@@ -14,9 +14,9 @@
 
     <header>
 
- <div class="container">
 
- <div class="row">
+<div class="container">
+ <div class="row mr-0 ml-0">
 <div class="title col-md-10 mt-2"><%= link_to "Closet", root_path, class: "logo" %></div>
 <div class="col-md-2">
  <% if user_signed_in? %>
@@ -32,12 +32,12 @@
             <% else %>
              <nav class="navbar navbar-light  justify-content-end">
              <ul class="navbar-nav">
-                 <div class="row">
-              <li  class="nav-item">
+                 <div class="row mt-3">
+              <li  class="nav-item col-md-6 pr-5">
                 <%= link_to "About", about_path, class: "menu far fa-lightbulb" %>
               </li>
 
-               <li  class="nav-item">
+               <li  class="nav-item  col-md-6 pl-5">
                  <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
                </li>
 
@@ -53,8 +53,11 @@
     </header>
 
    <div class="row">
-    <div class="col-md-2 sidebar"><%= render 'homes/sidebar' %></div>
-    <div class="col-md-10"><%= yield %></div>
+      <% if user_signed_in? %>
+    <div class="col-md-3 sidebar"><%= render 'homes/sidebar' %></div>
+     <% else %>
+      <% end %>
+    <div class="col-md-9"><%= yield %></div>
     </div>
 
     <footer>

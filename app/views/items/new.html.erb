@@ -1,7 +1,7 @@
-<h3 class="heading">New Item</h3>
+<h2 class="heading mt-3">New Item</h2>
 
-<div class="container">
-<div class="row">
+
+<div class="row mt-5">
 
 <div class="col-md-1"></div>
 
@@ -9,11 +9,14 @@
 <div class="col-md-10">
 <%= form_with model:@item, url:'/items', local:true do |f| %>
 
-<h4>画像</h4>
-<%= f.attachment_field :image %>
-
 
 <table class="table table-striped">
+<tr>
+<th>画像</th>
+<td><%= f.attachment_field :image %></td>
+</tr>
+
+
 <tr>
 <th>名前</th>
 <td><%= f.text_field :name %></td>
@@ -25,7 +28,7 @@
 </tr>
 </table>
 
-<%= f.submit '保存' %>
+<%= f.submit '保存', class: "btn btn-primary" %>
 
 
 <% end %>
@@ -34,5 +37,4 @@
 
 <div class="col-md-1"></div>
 
-</div>
 </div>
