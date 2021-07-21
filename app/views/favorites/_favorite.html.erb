@@ -1,12 +1,12 @@
  <%if style.favorited_by?(current_user) %>
   <p>
-    <%= link_to style_favorites_path(style), method: :delete, remote: true  do %>
+    <%= link_to style_favorites_path(style), method: :delete, remote: true, data: {"turbolinks" => false}  do %>
     ♥<%= style.favorites.count %>いいね
     <%  end %>
   </p>
   <% else %>
    <p>
-    <%= link_to style_favorites_path(style), method: :post, remote: true do %>
+    <%= link_to style_favorites_path(style), method: :post, remote: true, data: {"turbolinks" => false}   do %>
     ♡<%= style.favorites.count %>いいね
     <% end %>
   </p>

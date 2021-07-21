@@ -29,6 +29,17 @@ class UsersController < ApplicationController
       redirect_to root_path
   end
 
+ def likes
+       likes = Favorite.where(user_id: current_user.id).pluck(:style_id)
+       @like_styles = Style.find(likes)
+ end
+ 
+ def comments
+       comments = Comment.where(user_id: current_user.id).pluck(:style_id)
+       @comment_styles = Style.find(comments)
+
+ end
+
 
 private
 

@@ -11,51 +11,58 @@
 
   <body>
 
+
     <header>
-    <div class="container">
 
+ <div class="container">
 
+ <div class="row">
+<div class="title col-md-10 mt-2"><%= link_to "Closet", root_path, class: "logo" %></div>
+<div class="col-md-2">
+ <% if user_signed_in? %>
 
-        <nav class="navbar navbar-light  justify-content-end pt-4">
-              <% if user_signed_in? %>
+        <nav class="navbar navbar-light  justify-content-end mt-3">
+
              <ul class="navbar-nav">
-               <div class="row">
-              <li class="nav-item col-md-3">
-               <%= link_to "Styles", styles_path, class: "menu fas fa-tshirt"  %>
+              <li  class="nav-item">
+                <%= link_to "About", about_path, class: "menu far fa-lightbulb" %>
               </li>
-              <li  class="nav-item col-md-4">
-               <%= link_to "MyCloset", items_path, class: "menu fas fa-door-closed" %>
-              </li>
-
-              <li  class="nav-item col-md-4">
-               <%= link_to "LogOut", destroy_user_session_path, class: "menu fas fa-sign-out-alt", method: :delete %>
-              </li>
-                </div>
             </ul>
-
+             </nav>
             <% else %>
+             <nav class="navbar navbar-light  justify-content-end">
              <ul class="navbar-nav">
                  <div class="row">
-              <li  class="nav-item col-md-3">
+              <li  class="nav-item">
                 <%= link_to "About", about_path, class: "menu far fa-lightbulb" %>
               </li>
 
-               <li  class="nav-item  col-md-5">
+               <li  class="nav-item">
                  <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
                </li>
-               <li  class="nav-item col-md-4">
-                 <%= link_to "LogIn", new_user_session_path, class: "menu fas fa-sign-in-alt" %>
-               </li>
+
                </div>
              </ul>
-            <% end %>
+
         </nav>
-        </div>
+   <% end %>
+   </div>
+
+   </div>
+</div>
     </header>
 
-    <%= yield %>
+   <div class="row">
+    <div class="col-md-2 sidebar"><%= render 'homes/sidebar' %></div>
+    <div class="col-md-10"><%= yield %></div>
+    </div>
+
     <footer>
         <p class="text-center">Footer</p>
     </footer>
+
+
   </body>
+
+
 </html>

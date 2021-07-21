@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resource :relationships, only: [:create, :destroy]
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
+    get 'likes' => 'users#likes', as: 'likes'
+     get 'comments' => 'users#comments', as: 'comments'
+
    end
 
     get "users/:id/alert" => "users#alert", as: 'alert'
