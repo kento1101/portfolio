@@ -1,8 +1,7 @@
-<div class="container">
-<h3 class="heading">スタイル詳細</h3>
+<h2 class="heading mt-3">スタイル詳細</h2>
 
 
-<div class="row mt-3">
+<div class="row mt-5">
 <div class="col-md-1"></div>
 <div class="col-md-5">
 <%= attachment_image_tag @style, :image, format: 'jpeg', size: "330x440" %>
@@ -46,8 +45,8 @@
 
 
 <% if @style.user_id == current_user.id  %>
-<%= link_to "編集", edit_style_path(@style.id) %>
-<%= link_to "削除", style_path(@style.id), method: :delete %>
+<%= link_to "編集", edit_style_path(@style.id), class: "btn  btn-outline-secondary" %>
+<%= link_to "削除", style_path(@style.id), method: :delete, class: "btn  btn-outline-secondary"  %>
 <% else %>
 <% end %>
 
@@ -57,5 +56,3 @@
 
 </div>
 
-
-</div>

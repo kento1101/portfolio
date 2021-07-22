@@ -1,17 +1,17 @@
 
+<h2 class="heading mt-3">My Page</h2>
 
+  <div class="row ">
 
-  <div class="row">
-
-    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
 
     <% if @user == current_user  %>
 
-    <div class="col-md-4">
+    <div class="col-md-5">
       <%= attachment_image_tag @user, :image, format: 'png', size:"300x300" %>
     </div>
 
-    <div class="col-md-4 mt-5">
+    <div class="col-md-5 mt-3">
       <table class="table table-striped">
         <tr>
          <th>名前</th><td><%=@user.name %></td>
@@ -35,11 +35,11 @@
 
    <% else %>
 
-    <div class="col-md-4">
+    <div class="col-md-5">
       <%= attachment_image_tag @user, :image, format: 'jpeg', size:"300x300" %>
     </div>
 
-    <div class="col-md-4 mt-5">
+    <div class="col-md-5 mt-5">
       <table class="table table-striped">
         <tr>
          <th>名前</th><td><%=@user.name %></td>
@@ -60,7 +60,7 @@
 
      <% end %>
 
-<div class="d-flex flex-wrap justify-content-between">
+<div class="d-flex flex-wrap justify-content-between ml-5 mt-5">
 <% @styles.each do |style| %>
 
 <div>
@@ -72,6 +72,6 @@
 <% end %>
 </div>
 
-    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
 
   </div>

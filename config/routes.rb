@@ -26,5 +26,5 @@ Rails.application.routes.draw do
        resources :comments, only: [:create, :destroy]
    end
 
-
+get "search" => 'searchs#search'
 end

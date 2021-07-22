@@ -1,5 +1,7 @@
-<h3 class="heading">Comments Styles</h3>
+<h2 class="heading mt-3">Comments Styles</h2>
 
+<div class="row mt-5">
+<div class="col-md-1"></div>
   <div class="d-flex flex-wrap justify-content-between col-md-10">
       <% @comment_styles.each do |style| %>
 
@@ -11,4 +13,9 @@
        <div class="favorite-btn"><%= render partial: 'favorites/favorite', locals: { style: style } %></div>
      </div>
        <% end %>
+    </div>
+
+    <div class="col-md-1"></div>
+
+
     </div>

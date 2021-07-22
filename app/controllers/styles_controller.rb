@@ -15,7 +15,8 @@ def create
 end
 
 def index
-  @all_ranks = Style.find(Favorite.group(:style_id).order('count(style_id) desc').pluck(:style_id))
+  styles = Style.find(Favorite.group(:style_id).order('count(style_id) desc').pluck(:style_id))
+@all_ranks = styles.page(params[:page])
 end
 
 def show
