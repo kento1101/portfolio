@@ -1,7 +1,8 @@
 
 
 <div class="mt-5 bg-secondary">
-<h5 class="text-light pt-4 pl-2 font-weight-bold">ユーザーメニュー</h5>
+<h5 class="text-light pt-4 pl-2 font-weight-bold">ユーザーメニュー（<%= current_user.name %>さん）</h5>
+
 <table class="table">
     　　<tr><td><%= link_to 'マイページ', user_path(current_user.id), class: "fas fa-user text-light h6" %><td></tr>
      　<tr><td> <%= link_to "ログアウト", destroy_user_session_path, class: "fas fa-sign-out-alt  text-light h6", method: :delete %></td></tr>

@@ -15,7 +15,7 @@ def create
 end
 
 def index
-  @my_items = current_user.items
+  @my_items = current_user.items.page(params[:page]).per(8)
 
 end
 

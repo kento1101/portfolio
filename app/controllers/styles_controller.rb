@@ -15,9 +15,11 @@ def create
 end
 
 def index
-  styles = Style.find(Favorite.group(:style_id).order('count(style_id) desc').pluck(:style_id))
-@all_ranks = styles.page(params[:page])
+styles = Style.includes(:favorites).sort{|a,b|b.favorites.size <=> a.favorites.size}
+@all_ranks= Kaminari.paginate_array(styles).page(params[:page]).per(8)
 end
+
+
 
 def show
   @style = Style.find(params[:id])
