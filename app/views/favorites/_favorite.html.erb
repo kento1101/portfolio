@@ -1,3 +1,4 @@
+<div class="favo">
  <%if style.favorited_by?(current_user) %>
   <p>
     <%= link_to style_favorites_path(style), method: :delete, remote: true, data: {"turbolinks" => false}  do %>
@@ -11,3 +12,4 @@
     <% end %>
   </p>
   <% end %>
+  </div>
