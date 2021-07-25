@@ -1,0 +1,23 @@
+<div class="comments">
+  <p>コメント件数:<%= style.comments.count %></p>
+  <% style.comments.each do |comment| %>
+   <p>ユーザー画像</p>
+   <%= comment.user.name %>
+   <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.body %>
+
+  <% if comment.user == current_user %>
+  <div class="comment-delete">
+    <%= link_to "削除", style_comment_path(comment.style, comment), remote: true, method: :delete %>
+  </div>
+  <% end %>
+
+   <% end %>
+</div>
+
+
+<div class="new-comment">
+ <%= form_with(model: [style,comment], remote: true) do |f| %>
+   <%= f.text_area :body, rows: '5', placeholder: "コメントをここに" %>
+   <%= f.submit "送信する" %>
+  <% end %>
+</div>
