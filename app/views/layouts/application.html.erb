@@ -67,19 +67,19 @@
 
    <div class="row">
        <% if controller.controller_name == "homes" %>
+       <%= yield %>
         <% else %>
         <% if user_signed_in? %>
            <div class="col-md-3 sidebar"><%= render 'homes/sidebar' %></div>
+            <div class="col-md-9"><%= yield %></div>
         <% else %>
         <% end %>
       <% end %>
 
-
-    <div class="col-md-9"><%= yield %></div>
     </div>
 
     <footer>
-        <p class="text-center mt-3">©CLOSET</p>
+        <p class="text-center mt-3 small">Copyright © KENTO TESHIMA.All Rights Reserved</p>
     </footer>
 
 
