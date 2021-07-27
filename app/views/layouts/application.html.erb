@@ -20,31 +20,45 @@
 
 <div class="container">
  <div class="row mr-0 ml-0">
-<div class="title col-md-10 mt-2"><%= link_to "Closet", root_path, class: "logo" %></div>
-<div class="col-md-2">
+      <% if controller.controller_name == "homes" %>
+<div class="title col-md-7 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
+<div class="col-md-5 mt-3">
+
+  <nav class="navbar navbar-light  justify-content-end">
+
+             <ul class="navbar-nav d-flex">
+             <div class="row">
+             <li  class="nav-item ">
+              <%= link_to "ログイン", new_user_session_path, class: "menu fas fa-sign-out-alt" %>
+               </li>
+
+               <li  class="nav-item ml-3">
+                 <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
+               </li>
+               </div>
+               </nav>
+
+               </ul>
+
+      <% else %>
+      <div class="title col-md-7 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
+<div class="col-md-5 mt-3">
+
  <% if user_signed_in? %>
+ <div class="d-flex">
 <%= select_tag 'range', options_for_select([['---選択してください---', ''], ['Item', '1'],['Style','2']])  %>
 <%= select_tag 'search', options_for_select([["前方一致", "forward_match"], ["後方一致", "backward_match"],["完全一致","perfect_match"],["部分一致","partial_match"]])  %>
 <%= text_field_tag (:word) %>
 <%= submit_tag "検索" %>
 
+</div>
 
 
-        <nav class="navbar navbar-light  justify-content-end mt-3">
-
-             <ul class="navbar-nav">
-              <li  class="nav-item">
-                <%= link_to "About", about_path, class: "menu far fa-lightbulb" %>
-              </li>
-            </ul>
-             </nav>
             <% else %>
              <nav class="navbar navbar-light  justify-content-end">
              <ul class="navbar-nav">
                  <div class="row mt-3">
-              <li  class="nav-item col-md-4">
-                <%= link_to "About", about_path, class: "menu far fa-lightbulb" %>
-              </li>
+
 
                <li  class="nav-item col-md-4">
               <%= link_to "ログイン", new_user_session_path, class: "menu fas fa-sign-out-alt" %>
@@ -59,11 +73,12 @@
 
         </nav>
    <% end %>
-   </div>
+     <% end %>
 
    </div>
-</div>
-    </header>
+   </div>
+   </div>
+</header>
 
    <div class="row">
        <% if controller.controller_name == "homes" %>
@@ -73,6 +88,7 @@
            <div class="col-md-3 sidebar"><%= render 'homes/sidebar' %></div>
             <div class="col-md-9"><%= yield %></div>
         <% else %>
+        <div class="col-md-9"><%= yield %></div>
         <% end %>
       <% end %>
 
