@@ -1,42 +1,31 @@
 <h3 class="heading">Edit Item</h3>
 
 <div class="container">
-<div class="row">
+  <div class="row">
+    <div class="col-md-1"></div>
 
-<div class="col-md-1"></div>
+    <div class="col-md-10">
+        <%= form_with model:@item, url:"/items/#{@item.id}", local:true do |f| %>
+            <%= attachment_image_tag @item, :image, :fill,60,60 %>
+            <label for="inputImage">ItemImage</label>
+            <%= f.attachment_field :image, placeholder: "アイテム画像" %>
 
-<div class="col-md-10">
+            <table class="table table-striped">
+                <tr>
+                    <th>名前</th>
+                    <td><%= f.text_field :name %></td>
+                </tr>
+                <tr>
+                    <th>詳細</th>
+                    <td><%= f.text_area :detail %><td>
+                </tr>
+            </table>
 
-<%= form_with model:@item, url:"/items/#{@item.id}", local:true do |f| %>
+            <%= f.submit '変更を保存' %>
+        <% end %>
+    </div>
 
-<%= attachment_image_tag @item, :image, :fill,60,60 %>
-<label for="inputImage">ItemImage</label>
-<%= f.attachment_field :image, placeholder: "アイテム画像" %>
+    <div class="col-md-1"></div>
 
-
-
-<table class="table table-striped">
-    <tr>
-<th>名前</th>
-<td><%= f.text_field :name %></td>
-    </tr>
-
-<tr>
-<th>詳細</th>
-<td><%= f.text_area :detail %><td>
-</tr>
-
-</table>
-
-<%= f.submit '変更を保存' %>
-
-
-<% end %>
-
-</div>
-
-<div class="col-md-1"></div>
-
-
-</div>
+  </div>
 </div>

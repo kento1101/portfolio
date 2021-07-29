@@ -38,18 +38,13 @@ header {
 
 .logo {
   color: white;
-   font-size: 40px;
-
-
+  font-size: 40px;
 }
 
 .logo:hover {
   color: white;
   text-decoration: none;
-
 }
-
-
 
 .menu {
   font-size: 20px;
@@ -59,7 +54,7 @@ header {
 
 .side-item {
   color: black;
-   font-size: 20px;
+  font-size: 20px;
 }
 
 .sidebar {
@@ -69,7 +64,6 @@ header {
 .heading {
   color: steelblue;
   text-align: center;
-
 }
 
 footer {
@@ -98,42 +92,33 @@ footer {
 }
 
 .crown-2 {
-  position: absolute;
-   top: -2px;
-  left: 220px;
+ position: absolute;
+ top: -2px;
+ left: 220px;
  color: lightsteelblue;
  font-size: 2em;
 }
 
-
 .crown-3 {
-  position: absolute;
-   top: -2px;
-  left: 430px;
+ position: absolute;
+ top: -2px;
+ left: 430px;
  color: chocolate;
  font-size: 2em;
-
 }
 
 .favo {
   height: 20px;
-
 }
-
-
-
 
 .profile {
   border-radius: 50%;
-
 }
 
-
-
 .main-visual {
-  width: 100%;
-  height: 600px;
-  background-image: image-url("2547333.jpg");
+ width: 100%;
+ height: 600px;
+ background-image: image-url("2547333.jpg");
  background-size: 1050px 730px;
  opacity: 0.7;
  background-position: right 40% top 25px;
@@ -141,14 +126,12 @@ footer {
 }
 
 .main-visual h1 {
-    text-align: center;
-    color: black;
-    font-size: 100px;
-    margin-top: 150px;
-  font-weight: bold;
+ text-align: center;
+ color: black;
+ font-size: 100px;
+ margin-top: 150px;
+ font-weight: bold;
 }
-
-
 
 .about-closet {
   width: 100%;
@@ -160,15 +143,12 @@ footer {
 .about-closet h2 {
     font-size: 50px;
     margin-top: 100px;
-
 }
 
 .about-closet span {
     font-weight: bold;
     background: linear-gradient(transparent 70%, orange 70%);
 }
-
-
 
 .about-content{
     display: flex;
@@ -186,8 +166,8 @@ footer {
     height: 260px;
     background-color: orange;
     border-radius: 50%;
-     padding-top: 50px;
-     text-align: center;
+    padding-top: 50px;
+    text-align: center;
 }
 
 .about-box h3 {
@@ -209,17 +189,15 @@ footer {
     margin-left: 50px;
 }
 
-
-
 .collection {
   width: 100%;
   height: 550px;
   display: flex;
-   background-color: #EEE5DE;
+  background-color: #EEE5DE;
 }
 
 .box-1{
-    width: 40%;
+  width: 40%;
   height: 550px;
   margin-top: 150px;
   padding-left: 100px;
@@ -231,43 +209,37 @@ footer {
 }
 
 .box-1 h6 {
-  font-size: 20px;
-margin-top: 50px;
+ font-size: 20px;
+ margin-top: 50px;
 }
 
-
-
 .box-2{
-   width: 60%;
-  height: 550px;
-background-image: image-url("596922.jpg");
-   background-size: 600px 550px;
+ width: 60%;
+ height: 550px;
+ background-image: image-url("596922.jpg");
+ background-size: 600px 550px;
  background-repeat: no-repeat;
-   opacity: 0.7;
-   background-position: right 30px bottom 70px;
-background-blend-mode: lighten;
-
+ opacity: 0.7;
+ background-position: right 30px bottom 70px;
+ background-blend-mode: lighten;
 }
 
 .cordinate {
   width: 100%;
   height: 700px;
- background-color: lightgray;
-   display: flex;
+  background-color: lightgray;
+  display: flex;
 }
 
 .cordinate h3 {
-
   margin-top: 200px;
 }
-
 
 .cordinate-system {
   width: 500px;
   height: 700px;
   margin-top: 50px;
   padding-left: 100px;
-
 }
 
 .cordinate-system h3 {
@@ -277,11 +249,11 @@ background-blend-mode: lighten;
 
 .cordinate-system h6 {
   font-size: 20px;
-margin-top: 50px;
+  margin-top: 50px;
 }
 
 .a{
-    width: 600px;
+   width: 600px;
    background-color: lightgray;
    background-blend-mode: lighten;
    margin-top: 150px;
@@ -301,9 +273,9 @@ margin-top: 50px;
 }
 
 .box-3{
-   width: 50%;
+  width: 50%;
   height: 700px;
-   margin-top: 150px;
+  margin-top: 150px;
   padding-left: 100px;
 }
 
@@ -314,12 +286,11 @@ margin-top: 50px;
 
 .box-3 h6 {
   font-size: 20px;
-margin-top: 50px;
+  margin-top: 50px;
 }
 
-
 .box-4{
-   width: 50%;
+  width: 50%;
   height: 700px;
   background-image: image-url("2664806.jpg");
   background-size: 540px 360px;
@@ -327,34 +298,29 @@ margin-top: 50px;
   background-repeat: no-repeat;
 }
 
-
 .under {
   width: 100%;
   height: 350px;
   display: flex;
-    background-color: #EEE5DE;
+  background-color: #EEE5DE;
 }
 
 .under-box1 {
    width: 50%;
    margin-left: 300px;
    margin-top: 70px;
-  height: 350px;
-  background-image: image-url("dr036.png");
-  background-repeat: no-repeat;
-  background-size: 250px 250px;
-
+   height: 350px;
+   background-image: image-url("dr036.png");
+   background-repeat: no-repeat;
+   background-size: 250px 250px;
 }
 
 .under-box2 {
-   width: 50%;
+  width: 50%;
   height: 350px;
   margin-right: 200px;
-
 }
 
 .under-box2 h1 {
   margin-top: 70px;
 }
-
-

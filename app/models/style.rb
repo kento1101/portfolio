@@ -25,5 +25,4 @@ class Style < ApplicationRecord
     end
   end
 
-
 end

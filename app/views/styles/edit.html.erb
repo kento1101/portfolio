@@ -1,41 +1,30 @@
 <h3 class="heading">Edit Style</h3>
 
 <div class="container">
-<div class="row">
+  <div class="row">
 
-<div class="col-md-1"></div>
+    <div class="col-md-1"></div>
 
-<div class="col-md-10">
+    <div class="col-md-10">
+      <%= form_with model:@style, url:"/styles/#{@style.id}", local:true do |f| %>
+        <%= attachment_image_tag @style, :image, :fill,60,60 %>
+        <label for="inputImage">StyleImage</label>
+        <%= f.attachment_field :image, placeholder: "スタイル画像" %>
+        <table class="table table-striped">
+          <tr>
+            <th>名前</th>
+            <td><%= f.text_field :name %></td>
+          </tr>
+          <tr>
+            <th>詳細</th>
+            <td><%= f.text_area :detail %></td>
+          </tr>
+        </table>
+        <%= f.submit '変更を保存' %>
+      <% end %>
+    </div>
 
-<%= form_with model:@style, url:"/styles/#{@style.id}", local:true do |f| %>
+    <div class="col-md-1"></div>
 
-<%= attachment_image_tag @style, :image, :fill,60,60 %>
-<label for="inputImage">StyleImage</label>
-<%= f.attachment_field :image, placeholder: "スタイル画像" %>
-
-
-<table class="table table-striped">
-    <tr>
-<th>名前</th>
-<td><%= f.text_field :name %></td>
-</tr>
-
-<tr>
-<th>詳細</th>
-<td><%= f.text_area :detail %></td>
-</tr>
-
-
-</table>
-<%= f.submit '変更を保存' %>
-
-
-<% end %>
-
-</div>
-
-<div class="col-md-1"></div>
-
-
-</div>
+  </div>
 </div>

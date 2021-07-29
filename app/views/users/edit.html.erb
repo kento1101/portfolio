@@ -1,47 +1,37 @@
 <h3 class="heading">User Info</h3>
 
 <div class="container">
-<div class="row">
+    <div class="row">
 
-<div class="col-md-1"></div>
+        <div class="col-md-1"></div>
 
-<div class="col-md-10">
-<%= form_with model:@user, url:"/users/#{@user.id}", local:true do |f| %>
+        <div class="col-md-10">
+            <%= form_with model:@user, url:"/users/#{@user.id}", local:true do |f| %>
+                <%= attachment_image_tag @user, :image, :fill,60,60 %>
+                <label for="inputImage">ProfileImage</label>
+                <%= f.attachment_field :image, placeholder: "プロフィール画像" %>
+                <table class="table table-striped">
+                    <tr>
+                        <th>名前</th>
+                        <td><%= f.text_field :name %></td>
+                    </tr>
+                    <tr>
+                        <th>自己紹介文</th>
+                        <td><%= f.text_area :introduction %><td>
+                    </tr>
+                    <tr>
+                        <th>メールアドレス</th>
+                        <td><%= f.text_field :email %></td>
+                    </tr>
+                </table>
+                <%= f.submit '変更を保存' %>
+                <div class="btn">
+                    <%= link_to '退会する', alert_path, class: "btn btn-outline-secondary" %>
+                </div>
+            <% end %>
+        </div>
 
+        <div class="col-md-1"></div>
 
-<%= attachment_image_tag @user, :image, :fill,60,60 %>
-<label for="inputImage">ProfileImage</label>
-<%= f.attachment_field :image, placeholder: "プロフィール画像" %>
-
-
-<table class="table table-striped">
-    <tr>
-<th>名前</th>
-<td><%= f.text_field :name %></td>
-    </tr>
-
-<tr>
-<th>自己紹介文</th>
-<td><%= f.text_area :introduction %><td>
-</tr>
-
-<tr>
-<th>メールアドレス</th>
-<td><%= f.text_field :email %></td>
-</tr>
-
-</table>
-
-<%= f.submit '変更を保存' %>
-
-<div class="btn"><%= link_to '退会する', alert_path, class: "btn btn-outline-secondary" %></div>
-
-
-<% end %>
-</div>
-
-<div class="col-md-1"></div>
-
-
-</div>
+    </div>
 </div>

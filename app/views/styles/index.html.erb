@@ -1,28 +1,31 @@
-<h2 class="heading mt-3">Styles</h2>
+  <h2 class="heading mt-3">Styles</h2>
 
   <div class="row mt-5">
+
     <div class="col-md-1"></div>
 
     <div class="d-flex flex-wrap justify-content-between col-md-10 crown-body">
       <% if @all_ranks.first_page? %>
-      <i class="fas fa-crown crown-1"></i>
-      <i class="fas fa-crown crown-2"></i>
-      <i class="fas fa-crown crown-3"></i>
+        <i class="fas fa-crown crown-1"></i>
+        <i class="fas fa-crown crown-2"></i>
+        <i class="fas fa-crown crown-3"></i>
       <% else %>
       <% end %>
 
       <% @all_ranks.each do |style| %>
+       <div>
+         <%= link_to style_path(style) do %>
+           <%= attachment_image_tag style, :image, format: 'jpeg', size: "150x200", class: "mr-5" %>
+         <% end %>
+           <div class="favorite-btn" id="style_<%= style.id %>" ><%= render partial: 'favorites/favorite', locals: { style: style } %></div>
+           <p><%= link_to "#{style.comments.count}コメント", style_path(style.id), class: "far fa-comment" %></p>
+       </div>
+      <% end %>
 
-     <div>
-       <%= link_to style_path(style) do %>
-         <%= attachment_image_tag style, :image, format: 'jpeg', size: "150x200", class: "mr-5" %>
-       <% end %>
-         <div class="favorite-btn" id="style_<%= style.id %>" ><%= render partial: 'favorites/favorite', locals: { style: style } %></div>
-         <p><%= link_to "#{style.comments.count}コメント", style_path(style.id), class: "far fa-comment" %></p>
-     </div>
-       <% end %>
-    <div class="mt-5"><%= paginate @all_ranks %></div>
+      <div class="mt-5"><%= paginate @all_ranks %></div>
+
     </div>
 
     <div class="col-md-1"></div>
+
   </div>

@@ -1,21 +1,21 @@
 <h2 class="heading mt-3">Comments Styles</h2>
 
 <div class="row mt-5">
-<div class="col-md-1"></div>
+
+  <div class="col-md-1"></div>
+
   <div class="d-flex flex-wrap justify-content-between col-md-10">
-      <% @comment_styles.each do |style| %>
-
+    <% @comment_styles.each do |style| %>
      <div>
-<%= link_to style_path(style) do %>
+      <%= link_to style_path(style) do %>
          <%= attachment_image_tag style, :image, format: 'jpeg', size:"200x200" %>
-       <% end %>
-       <p><%= link_to "#{style.comments.count}コメント", style_path(style.id)  %></p>
-       <div class="favorite-btn"><%= render partial: 'favorites/favorite', locals: { style: style } %></div>
+      <% end %>
+      <p><%= link_to "#{style.comments.count}コメント", style_path(style.id)  %></p>
+      <div class="favorite-btn"><%= render partial: 'favorites/favorite', locals: { style: style } %></div>
      </div>
-       <% end %>
-    </div>
+    <% end %>
+  </div>
 
-    <div class="col-md-1"></div>
+  <div class="col-md-1"></div>
 
-
-    </div>
+</div>

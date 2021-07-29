@@ -19,8 +19,6 @@ styles = Style.includes(:favorites).sort{|a,b|b.favorites.size <=> a.favorites.s
 @all_ranks= Kaminari.paginate_array(styles).page(params[:page]).per(8)
 end
 
-
-
 def show
   @style = Style.find(params[:id])
   @comment = Comment.new

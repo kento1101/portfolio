@@ -1,10 +1,8 @@
 class Item < ApplicationRecord
-  
+
   attachment :image
    belongs_to :user
-   
-   
-  
+
   def self.search_for(search, word)
     if search == 'perfect_match'
       Item.where(name: word)
@@ -19,5 +17,5 @@ class Item < ApplicationRecord
     end
   end
 
-   
+
 end

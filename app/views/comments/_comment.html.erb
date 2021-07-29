@@ -4,13 +4,13 @@
    <%= comment.user.name %>
    <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.body %>
 
-  <% if comment.user == current_user %>
-  <div class="comment-delete">
-    <%= link_to "削除", style_comment_path(comment.style, comment), remote: true, method: :delete %>
-  </div>
-  <% end %>
-
+   <% if comment.user == current_user %>
+    <div class="comment-delete">
+     <%= link_to "削除", style_comment_path(comment.style, comment), remote: true, method: :delete %>
+    </div>
    <% end %>
+
+  <% end %>
 </div>
 
 

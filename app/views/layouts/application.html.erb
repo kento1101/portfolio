@@ -4,86 +4,82 @@
     <title>Portfolio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
- <script src="https://kit.fontawesome.com/fad7ba032c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fad7ba032c.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
 
   <body>
-
     <header>
-
-<div class="container">
- <div class="row mr-0 ml-0">
-      <% if controller.controller_name == "homes" %>
-        <div class="title col-md-7 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
-        <div class="col-md-5 mt-3">
-          <nav class="navbar navbar-light  justify-content-end">
-             <ul class="navbar-nav d-flex">
-                 <div class="row">
-                 <li  class="nav-item ">
-                    <%= link_to "LogIn", new_user_session_path, class: "menu fas fa-sign-out-alt" %>
-                 </li>
-                 <li  class="nav-item ml-3">
-                    <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
-                 </li>
-                 </div>
-               </ul>
-          </nav>
-      <% else %>
-        <div class="title col-md-7 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
-        <div class="col-md-5 mt-3">
-        <% if user_signed_in? %>
-            <div class="d-flex">
+      <div class="container">
+       <div class="row mr-0 ml-0">
+        <% if controller.controller_name == "homes" %>
+          <div class="title col-md-7 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
+          <div class="col-md-5 mt-3">
+            <nav class="navbar navbar-light  justify-content-end">
+              <ul class="navbar-nav d-flex">
+                <div class="row">
+                   <li  class="nav-item ">
+                      <%= link_to "LogIn", new_user_session_path, class: "menu fas fa-sign-out-alt" %>
+                   </li>
+                   <li  class="nav-item ml-3">
+                       <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
+                   </li>
+                </div>
+              </ul>
+            </nav>
+        <% else %>
+          <div class="title col-md-7 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
+          <div class="col-md-5 mt-3">
+            <% if user_signed_in? %>
+              <div class="d-flex">
                 <%= select_tag 'range', options_for_select([['---選択してください---', ''], ['Item', '1'],['Style','2']])  %>
                 <%= select_tag 'search', options_for_select([["前方一致", "forward_match"], ["後方一致", "backward_match"],["完全一致","perfect_match"],["部分一致","partial_match"]])  %>
                 <%= text_field_tag (:word) %>
                 <%= submit_tag "検索" %>
-            </div>
-        <% else %>
-            <nav class="navbar navbar-light  justify-content-end">
-             <ul class="navbar-nav">
-                <div class="row mt-3">
-                <li  class="nav-item col-md-4">
-                  <%= link_to "LogIN", new_user_session_path, class: "menu fas fa-sign-out-alt" %>
-                </li>
-                <li  class="nav-item  col-md-4">
-                  <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
-                </li>
-               </div>
-             </ul>
-            </nav>
-        <% end %>
-     <% end %>
+              </div>
+            <% else %>
+              <nav class="navbar navbar-light  justify-content-end">
+                <ul class="navbar-nav">
+                  <div class="row mt-3">
+                    <li  class="nav-item col-md-4">
+                      <%= link_to "LogIN", new_user_session_path, class: "menu fas fa-sign-out-alt" %>
+                    </li>
+                    <li  class="nav-item  col-md-4">
+                      <%= link_to "SignUp", new_user_registration_path, class: "menu fas fa-user-plus" %>
+                    </li>
+                  </div>
+                </ul>
+              </nav>
+            <% end %>
+      <% end %>
+     </div>
    </div>
-   </div>
-   </div>
+  </div>
 </header>
 
-   <div class="row">
-       <% if controller.controller_name == "homes" %>
-       <%= yield %>
-        <% else %>
-        <% if user_signed_in? %>
-           <div class="col-md-3 sidebar"><%= render 'homes/sidebar' %></div>
-            <div class="col-md-9"><%= yield %></div>
-        <% else %>
+ <div class="row">
+    <% if controller.controller_name == "homes" %>
+      <%= yield %>
+    <% else %>
+      <% if user_signed_in? %>
+        <div class="col-md-3 sidebar"><%= render 'homes/sidebar' %></div>
+        <div class="col-md-9"><%= yield %></div>
+      <% else %>
         <div class="col-md-3"></div>
         <div class="col-md-9"><%= yield %></div>
-        <% end %>
       <% end %>
+    <% end %>
 
-    </div>
+  </div>
 
-    <footer>
-        <p class="text-center mt-3 small">Copyright © KENTO TESHIMA.All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p class="text-center mt-3 small">Copyright © KENTO TESHIMA.All Rights Reserved</p>
+  </footer>
 
-
-  </body>
-
+ </body>
 
 </html>

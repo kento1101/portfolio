@@ -1,28 +1,30 @@
-
-
 <div class="mt-5 bg-secondary">
-<h5 class="text-light pt-4 pl-2 font-weight-bold">ユーザーメニュー（<%= current_user.name %>さん）</h5>
+  <h5 class="text-light pt-4 pl-2 font-weight-bold">ユーザーメニュー（<%= current_user.name %>さん）</h5>
 
-<table class="table">
-    　　<tr><td><%= link_to 'マイページ', user_path(current_user.id), class: "fas fa-user text-light h6" %><td></tr>
-     　<tr><td> <%= link_to "ログアウト", destroy_user_session_path, class: "fas fa-sign-out-alt  text-light h6", method: :delete %></td></tr>
-      <tr><td><%= link_to 'いいねしたコーディネート', user_likes_path(current_user.id), class: "fas fa-heart  text-light h6" %></td></tr>
-      <tr><td><%= link_to 'コメントしたコーディネート', user_comments_path(current_user.id), class: "fas fa-comment  text-light h6" %></td></tr>
-     </table>
+  <table class="table">
+    <tr><td><%= link_to 'マイページ', user_path(current_user.id), class: "fas fa-user text-light h6" %><td></tr>
+    <tr><td> <%= link_to "ログアウト", destroy_user_session_path, class: "fas fa-sign-out-alt  text-light h6", method: :delete %></td></tr>
+    <tr><td><%= link_to 'いいねしたコーディネート', user_likes_path(current_user.id), class: "fas fa-heart  text-light h6" %></td></tr>
+    <tr><td><%= link_to 'コメントしたコーディネート', user_comments_path(current_user.id), class: "fas fa-comment  text-light h6" %></td></tr>
+  </table>
 </div>
 
-<div class="mt-5 bg-secondary">
-      <h5 class="text-light pt-3 pl-2 font-weight-bold">コーディネートメニュー</h5>
-    <table class="table">
-          <tr><td><%= link_to "コーディネートランキング", styles_path, class: "fas fa-crown text-light h6" %></td></tr>
-           <tr><td><%= link_to 'コーディネートの新規追加', new_style_path, class: "fas fa-child text-light h6" %></td></tr>
-    </table>
-</div>
 
 <div class="mt-5 bg-secondary">
-     <h5  class="text-light pt-3 pl-2 font-weight-bold">アイテムメニュー</h5>
-    <table class="table">
-      <tr><td><%= link_to "マイクローゼット", items_path, class: "fas fa-door-closed text-light h6" %></td></tr>
-      <tr><td><%= link_to 'アイテムの新規追加', new_item_path, class: "fas fa-tshirt text-light h6" %></td></tr>
-    </table>
- </div>
+  <h5 class="text-light pt-3 pl-2 font-weight-bold">コーディネートメニュー</h5>
+
+  <table class="table">
+    <tr><td><%= link_to "コーディネートランキング", styles_path, class: "fas fa-crown text-light h6" %></td></tr>
+    <tr><td><%= link_to 'コーディネートの新規追加', new_style_path, class: "fas fa-child text-light h6" %></td></tr>
+  </table>
+</div>
+
+
+<div class="mt-5 bg-secondary">
+  <h5  class="text-light pt-3 pl-2 font-weight-bold">アイテムメニュー</h5>
+
+  <table class="table">
+    <tr><td><%= link_to "マイクローゼット", items_path, class: "fas fa-door-closed text-light h6" %></td></tr>
+    <tr><td><%= link_to 'アイテムの新規追加', new_item_path, class: "fas fa-tshirt text-light h6" %></td></tr>
+  </table>
+</div>
