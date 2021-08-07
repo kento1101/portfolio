@@ -16,6 +16,9 @@
                 <%= attachment_image_tag(@style.user, :image, :fill, 100, 100) %><br>
                 <%= @style.user.name %>
             <% end %>
+            <% @style.tags.each do |tag| %>
+  　            <span class="btn btn-info"><%= tag.name %></span>
+            <% end %>
         </div>
         <div class="favorite-btn" id="style_<%= @style.id %>"><%= render partial: 'favorites/favorite', locals: { style: @style } %></div>
         <div class="comment-btn" id="comments_<%= @style.id %>"><%= render partial: 'comments/comment', locals: {style: @style, comment: @comment} %></div>
