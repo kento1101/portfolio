@@ -1,5 +1,14 @@
-<div class="mt-5 bg-secondary">
-  <h5 class="text-light pt-4 pl-2 font-weight-bold">ユーザーメニュー（<%= current_user.name %>さん）</h5>
+
+  <div class="Toggle">
+　　<span></span>
+　　<span></span>
+　　<span></span>
+</div>
+
+<div class="side-menu mt-5">
+
+<div class="bg-secondary">
+    <h5 class="text-light pt-4 pl-2 font-weight-bold">ユーザーメニュー（<%= current_user.name %>さん）</h5>
 
   <table class="table">
     <tr><td><%= link_to 'マイページ', user_path(current_user.id), class: "fas fa-user text-light h6" %><td></tr>
@@ -27,4 +36,6 @@
     <tr><td><%= link_to "マイクローゼット", items_path, class: "fas fa-door-closed text-light h6" %></td></tr>
     <tr><td><%= link_to 'アイテムの新規追加', new_item_path, class: "fas fa-tshirt text-light h6" %></td></tr>
   </table>
+</div>
+
 </div>

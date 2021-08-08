@@ -115,410 +115,107 @@ footer {
   border-radius: 50%;
 }
 
-.main-visual {
- width: 100%;
- height: 600px;
- background-image: image-url("2547333.jpg");
- background-size: 1050px 730px;
- opacity: 0.7;
- background-position: right 40% top 25px;
- background-repeat: no-repeat;
-}
 
-.main-visual h1 {
- text-align: center;
- color: black;
- font-size: 100px;
- margin-top: 150px;
- font-weight: bold;
-}
-
-.about-closet {
-  width: 100%;
-  height: 700px;
-  background-color: lightgray;
-  text-align: center;
-}
-
-.about-closet h2 {
-    font-size: 50px;
-    margin-top: 100px;
-}
-
- .about-closet  span {
-    font-weight: bold;
-    background: linear-gradient(transparent 70%, orange 70%);
-}
-
-.about-content{
-    display: flex;
-    justify-content: center;
-    margin-top: 130px;
-    color: white;
-}
-
-.about-content i {
-    font-size: 80px;
-}
-
-.about-box {
-    width: 260px;
-    height: 260px;
-    background-color: orange;
-    border-radius: 50%;
-    padding-top: 50px;
-    text-align: center;
-}
-
-.about-box h3 {
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 20px;
-}
-
-.about-item1 {
-    margin-right: 50px;
-}
-
-.about-item1 h3 {
-    margin-left: 5px;
-}
-
-.about-item3 {
-    margin-left: 50px;
-}
-
-.collection {
-  width: 100%;
-  height: 550px;
-  display: flex;
-  background-color: #EEE5DE;
-}
-
-.box-1{
-  width: 40%;
-  height: 550px;
-  margin-top: 150px;
-  padding-left: 100px;
-}
-
-.box-1 h3 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.box-1 h6 {
- font-size: 20px;
- margin-top: 50px;
-}
-
-.box-2{
- width: 60%;
- height: 550px;
- background-image: image-url("596922.jpg");
- background-size: 600px 550px;
- background-repeat: no-repeat;
- opacity: 0.7;
- background-position: right 30px bottom 70px;
- background-blend-mode: lighten;
-}
-
-.cordinate {
-  width: 100%;
-  height: 700px;
-  background-color: lightgray;
-  display: flex;
-}
-
-.cordinate h3 {
-  margin-top: 200px;
-}
-
-.cordinate-system {
-  width: 500px;
-  height: 700px;
-  margin-top: 50px;
-  padding-left: 100px;
-}
-
-.cordinate-system h3 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.cordinate-system h6 {
-  font-size: 20px;
-  margin-top: 50px;
-}
-
-.a{
-   width: 600px;
-   background-color: lightgray;
-   background-blend-mode: lighten;
-   margin-top: 150px;
-   margin-left: 100px;
+.Toggle{
+ display: none;
 }
 
 
-.c{
-  height: 360px;
-  width : 600px;
+.menu {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
 }
-
-.check-user {
-  width: 100%;
-  height: 700px;
-  display: flex;
-}
-
-.box-3{
-  width: 50%;
-  height: 700px;
-  margin-top: 150px;
-  padding-left: 100px;
-}
-
-.box-3 h3 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.box-3 h6 {
-  font-size: 20px;
-  margin-top: 50px;
-}
-
-.box-4{
-  width: 50%;
-  height: 700px;
-  background-image: image-url("2664806.jpg");
-  background-size: 540px 360px;
-  background-position: left 20% top 40%;
-  background-repeat: no-repeat;
-}
-
-.under {
-  width: 100%;
-  height: 350px;
-  display: flex;
-  background-color: #EEE5DE;
-}
-
-.under-box1 {
-   width: 50%;
-   margin-left: 300px;
-   margin-top: 70px;
-   height: 350px;
-   background-image: image-url("dr036.png");
-   background-repeat: no-repeat;
-   background-size: 250px 250px;
-}
-
-.under-box2 {
-  width: 50%;
-  height: 350px;
-  margin-right: 200px;
-}
-
-.under-box2 h1 {
-  margin-top: 70px;
-}
-
 
 @media screen and (max-width:425px) {
 
-.navbar-nav {
-  display: block;
+.searchbar {
+  display: none;
 }
 
-.about-closet {
-  height: 1300px;
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+  right: 50px;
+  top: 15px;
 }
 
-.ac-title {
-  text-align: center;
-  display: inline-block;
-}
-
-.about-closet span {
-    font-size: 50px;
-    margin-top: 100px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.about-closet .ac-text2 {
-    font-weight: bold;
-    background: linear-gradient(transparent 70%, orange 70%);
-     display: inline-block;
-}
-
-
-.about-content {
-  display: block;
-  margin-top: 100px;
-}
-
-.about-box{
-  margin: 0 auto;
-}
-
-.about-item1 {
-  margin-top: 50px;
-}
-
-.about-item2 {
-  margin-top: 50px;
-}
-
-.about-item3 {
-  margin-top: 50px;
-}
-
-.collection {
-  width: 100%;
-  height: 700px;
-  flex-direction: column;
-  background-color: #EEE5DE;
-}
-
-.box-1{
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  padding-left: 50px;
-  order: 2;
-}
-
-.box-1 h3 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.box-1 h6 {
- font-size: 20px;
- margin-top: 50px;
- margin-right: 10px
-}
-
-.box-2{
- width: 100%;
- height: 350px;
- background-image: image-url("596922.jpg");
- background-size: contain;
- background-repeat: no-repeat;
- opacity: 0.7;
- background-position: right 10px bottom 80px;
- background-blend-mode: lighten;
- order: 1;
-}
-
-.cordinate {
-  width: 100%;
-  height: 700px;
-  background-color: lightgray;
- flex-direction: column;
-}
-
-.cordinate h3 {
-  margin-top: 0px;
-}
-
-.cordinate-system {
-  width: 100%;
-  height: 300px;
-  margin-top: 50px;
-  padding-left: 50px;
-}
-
-.cordinate-system h3 {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.cordinate-system h6 {
-  font-size: 20px;
-   margin-right: 10px
-}
-
-.a{
-   width: 100%;
-   background-color: lightgray;
-   background-blend-mode: lighten;
-   margin-top: 0px;
-   margin-left: 0px;
-}
-
-
-.c{
-  height: 360px;
-  width : 100%;
-}
-
-.check-user {
-  width: 100%;
-  height: 1000px;
-  flex-direction: column;
-}
-
-.box-3{
-  width: 100%;
-  height: 500px;
-  margin-top: 50px;
-  padding-left: 50px;
-   order: 2;
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #ffffff;
+    -webkit-transition: .35s ease-in-out; /*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;    /*変化の速度を指定*/
+    transition: .35s ease-in-out;     /*変化の速度を指定*/
 
 }
 
-.box-3 h3 {
-  font-size: 30px;
-  font-weight: bold;
+.Toggle span:nth-child(1) {
+    top:5px;
 }
 
-.box-3 h6 {
-  font-size: 20px;
-  margin-top: 50px;
-  margin-right: 10px
+.Toggle span:nth-child(2) {
+    top: 18px;
 }
 
-.box-4{
-  width: 100%;
-  height: 500px;
-  background-image: image-url("2664806.jpg");
-  background-size: contain;
-  background-position: left 20% top 40%;
-  background-repeat: no-repeat;
-   order: 1;
+.Toggle span:nth-child(3) {
+    top: 32px;
 }
 
-.under {
-  width: 100%;
-  height: 500px;
-  display: flex;
-   flex-direction: column;
-  background-color: #EEE5DE;
+
+
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
-.under-box1 {
-   width: 100%;
-   margin: 0 auto;
-   height: 250px;
-   background-image: image-url("dr036.png");
-   background-repeat: no-repeat;
-   background-size: 250px 250px;
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.side-menu{
+  transition: .5s ease;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+  z-index: 10;
+  position: relative;
+}
+
+.side-menu.open {
+ -webkit-transform: translateX(0%);
+ transform: translateX(0%);/*中身を表示（右へスライド）*/
+ z-index: 10;
+   position: relative;
+   margin-top: 0;
+}
+
+.contents {
+  transition: .5s ease;/*滑らかに表示*/
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);/*左に隠しておく*/
+ z-index: 3;
+   position: relative;
 
 }
 
-.under-box2 {
-  width: 100%;
-  height: 250px;
-  margin: 0 auto;
+.contents .open {
+ z-index: 3;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);/*左に隠しておく*/
+    position: relative;
 }
 
-.under-box2 h1 {
-  margin-top: 0px;
-}
 
 
 }

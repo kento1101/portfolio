@@ -29,3 +29,12 @@ $(function() {
         pauseOnHover: false,
     });
 });
+
+
+$(function() {
+　$('.Toggle').click(function() {
+   $(this).toggleClass('active');
+  $('.side-menu').toggleClass('open bg-secondary mt-5');
+   $('.contents').toggleClass('open');
+ });
+});
