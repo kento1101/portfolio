@@ -31,13 +31,14 @@ class UsersController < ApplicationController
 
  def likes
        likes = Favorite.where(user_id: current_user.id).pluck(:style_id)
-       @like_styles = Style.find(likes)
+       likings = Style.find(likes)
+       @like_styles = Kaminari.paginate_array(likings).page(params[:page]).per(8)
  end
 
  def comments
        comments = Comment.where(user_id: current_user.id).pluck(:style_id)
-       @comment_styles = Style.find(comments)
-
+       commentings = Style.find(comments)
+@comment_styles = Kaminari.paginate_array(commentings).page(params[:page]).per(8)
  end
 
 
