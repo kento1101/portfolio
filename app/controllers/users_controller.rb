@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
    @user = User.find(params[:id])
-   @styles = @user.styles
+   @styles = Kaminari.paginate_array(@user.styles).page(params[:page]).per(4)
   end
 
   def edit
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
        likes = Favorite.where(user_id: current_user.id).pluck(:style_id)
        @like_styles = Style.find(likes)
  end
- 
+
  def comments
        comments = Comment.where(user_id: current_user.id).pluck(:style_id)
        @comment_styles = Style.find(comments)

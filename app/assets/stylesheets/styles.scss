@@ -1,3 +1,72 @@
 // Place all the styles related to the Styles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contents {
+    height: 800px;
+
+    }
+
+
+
+.crown-body {
+  position: relative;
+
+}
+
+.crown-1 {
+  position: absolute;
+  top: -2px;
+  left: 8px;
+ color: yellow;
+ font-size: 2.5em;
+}
+
+.crown-2 {
+ position: absolute;
+ top: -2px;
+ left: 220px;
+ color: lightsteelblue;
+ font-size: 2em;
+}
+
+.crown-3 {
+ position: absolute;
+ top: -2px;
+ left: 430px;
+ color: chocolate;
+ font-size: 2em;
+}
+
+.style-name {
+  display: block;
+}
+
+
+@media screen and (max-width:425px) {
+
+  .contents {
+    height: 900px;
+    margin-left: 25px;
+    padding: 0;
+
+  }
+
+
+
+  .style-name {
+  margin-top: 20px;
+}
+
+
+.crown-3 {
+ position: absolute;
+ top: 250px;
+ left: 8px;
+ color: chocolate;
+ font-size: 2em;
+}
+
+
+
+}

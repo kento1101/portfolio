@@ -23,9 +23,8 @@ body {
   background-color: white;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 60px;
-  box-sizing: border-box;
-  padding-right: 0;
+    box-sizing: border-box;
+
 }
 
 header {
@@ -75,36 +74,6 @@ footer {
   font-weight: bold;
   color: white;
   background-color: steelblue;
-}
-
-
-.crown-body {
-  position: relative;
-
-}
-
-.crown-1 {
-  position: absolute;
-  top: -2px;
-  left: 8px;
- color: yellow;
- font-size: 2.5em;
-}
-
-.crown-2 {
- position: absolute;
- top: -2px;
- left: 220px;
- color: lightsteelblue;
- font-size: 2em;
-}
-
-.crown-3 {
- position: absolute;
- top: -2px;
- left: 430px;
- color: chocolate;
- font-size: 2em;
 }
 
 .favo {
