@@ -1,8 +1,11 @@
 <div class="comments">
-  <p>コメント件数:<%= style.comments.count %></p>
+
+  <p class="comments-number">コメント件数:<%= style.comments.count %></p>
+  <div class="pagenate comments-pagenate"><%= paginate style_comments %></div>
+
 
   <table class="table">
-  <% style.comments.each do |comment|  %>
+  <% style_comments.each do |comment|  %>
   <tr>
    <td><%= comment.user.name %></td>
   <td> <%= comment.created_at.strftime('%Y/%m/%d') %></td>
@@ -33,3 +36,4 @@
    <%= f.submit "送信する" %>
   <% end %>
 </div>
+

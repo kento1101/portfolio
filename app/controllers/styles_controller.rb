@@ -26,6 +26,7 @@ end
 def show
   @style = Style.find(params[:id])
   @comment = Comment.new
+  @style_comments = @style.comments.page(params[:page]).per(5)
 end
 
 def edit

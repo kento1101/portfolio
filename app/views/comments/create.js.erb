@@ -1,1 +1,1 @@
-$("#comments_<%= @style.id %>").html("<%=  j(render partial: 'comments/comment', locals: {style: @style, comment: @comment}) %>");
+$("#comments_<%= @style.id %>").html("<%=  j(render partial: 'comments/comment', locals: {style: @style, comment: @comment,style_comments: @style_comments}) %>");

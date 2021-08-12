@@ -22,7 +22,7 @@
             <% end %>
         </div>
 
-        <div class="comment-btn" id="comments_<%= @style.id %>"><%= render partial: 'comments/comment', locals: {style: @style, comment: @comment} %></div>
+        <div class="comment-btn" id="comments_<%= @style.id %>"><%= render partial: 'comments/comment', locals: {style: @style, comment: @comment, style_comments: @style_comments} %></div>
         <% if @style.user_id == current_user.id  %>
             <%= link_to "Edit", edit_style_path(@style.id), class: "btn  btn-outline-secondary" %>
             <%= link_to "Delete", style_path(@style.id), method: :delete, class: "btn  btn-outline-secondary"  %>
