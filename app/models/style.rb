@@ -12,18 +12,10 @@ class Style < ApplicationRecord
    favorites.where(user_id: user.id).exists?
   end
 
-  def self.search_for(search, word)
-    if search == 'perfect_match'
-      Style.where(name: word)
-    elsif search == 'forward_match'
-      Style.where('name LIKE ?', word + '%')
-    elsif search == 'backward_match'
-      Style.where('name LIKE ?', '%' + word)
-    elsif search == 'partial_match'
-      Style.where('name LIKE ?', '%' + word + '%')
-    else
-      Style.all
-    end
-  end
+   def self.search(search)
+      return Style.all unless search
+      Style.where(['name LIKE ?', "%#{search}%"])
+   end
+
 
 end

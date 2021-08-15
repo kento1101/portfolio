@@ -33,16 +33,14 @@
               </ul>
             </nav>
         <% else %>
-          <div class="title col-md-6 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
-          <div class="col-md-6 mt-3">
+          <div class="title col-md-8 mt-2"><%= link_to "Your Closet", root_path, class: "logo" %></div>
+          <div class="col-md-4 mt-3">
             <div class="searchbar">
             <% if user_signed_in? %>
-              <div class="d-flex">
-                <%= select_tag 'range', options_for_select([['---選択してください---', ''], ['Item', '1'],['Style','2']])  %>
-                <%= select_tag 'search', options_for_select([["前方一致", "forward_match"], ["後方一致", "backward_match"],["完全一致","perfect_match"],["部分一致","partial_match"]])  %>
-                <%= text_field_tag (:word) %>
-                <%= submit_tag "検索" %>
-              </div>
+              <%= form_tag(search_path,:method => 'get') do %>
+              <%= text_field_tag :search, "コーデの名前" %>
+              <%= submit_tag 'Search', :name => nil %>
+           <% end %>
               </div>
             <% else %>
               <nav class="navbar navbar-light  justify-content-end">

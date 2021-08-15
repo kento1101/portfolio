@@ -48,6 +48,9 @@ def destroy
    redirect_to styles_path
 end
 
+ def search
+    @styles = Style.search(params[:search])
+ end
 
 private
 
