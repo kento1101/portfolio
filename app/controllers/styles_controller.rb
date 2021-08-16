@@ -8,15 +8,13 @@ def create
     style = Style.new(style_params)
     style.user_id = current_user.id
     if style.save
-       tags = Vision.get_image_data(style.image)
-    　 tags.each do |tag|
-       style.tags.create(name: tag)
-    　 end
        redirect_to style_path(style.id)
     else
        render new
     end
 end
+
+
 
 def index
 styles = Style.includes(:favorites).sort{|a,b|b.favorites.size <=> a.favorites.size}
