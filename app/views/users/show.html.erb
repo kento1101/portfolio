@@ -51,7 +51,7 @@
 	   <th>follows</th><td><%= link_to followings_path(@user) do %><%= @user.followings.count %><% end %></td>
       </tr>
       <tr>
-	   <th>followers</th><td><%= link_to followers_path(@user) do %><%= @user.followers.count %><% end %></td>
+	   <th>followers</th><td><%= link_to followers_user_path(@user) do %><%= @user.followers.count %><% end %></td>
       </tr>
       </table>
 
