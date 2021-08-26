@@ -38,7 +38,7 @@
             <div class="searchbar">
             <% if user_signed_in? %>
               <%= form_tag(search_path,:method => 'get') do %>
-              <%= text_field_tag :search, "コーデの名前" %>
+              <%= text_field_tag :search ,"", placeholder:"コーデの名前"%>
               <%= submit_tag 'Search', :name => nil %>
            <% end %>
               </div>

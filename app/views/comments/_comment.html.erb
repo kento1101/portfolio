@@ -31,7 +31,7 @@
 
 
 <div class="new-comment">
- <%= form_with(model: [style,comment], remote: true) do |f| %>
+ <%= form_with(model: [style,Comment.new], remote: true) do |f| %>
    <%= f.text_area :body, rows: '5', placeholder: "コメントをここに" %>
    <%= f.submit "送信する" %>
   <% end %>
