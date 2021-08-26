@@ -5,15 +5,17 @@ Rails.application.routes.draw do
   root to: 'homes#top'
 
    resources :users, only: [:edit,:update, :show] do
-    resource :relationships, only: [:create, :destroy]
-    get 'followings' => 'relationships#followings', as: 'followings'
-    get 'followers' => 'relationships#followers', as: 'followers'
+    member do
+    get 'alert' => "users#alert", as: 'alert'
     get 'likes' => 'users#likes', as: 'likes'
     get 'comments' => 'users#comments', as: 'comments'
+    patch 'withdraw' => "users#withdraw", as: 'withdraw'
+    end
+    resource :relationships, only: [:create, :destroy]
    end
 
-    get "users/:id/alert" => "users#alert", as: 'alert'
-    patch "users/:id/withdraw" => "users#withdraw", as: 'withdraw'
+    get '/users/:id/followings' => 'users#followings', as: 'followings'
+     get '/users/:id/followers' => 'users#followers', as: 'followers'
 
    resources :items
 
@@ -26,3 +28,6 @@ Rails.application.routes.draw do
 
 
 end
+
+
+

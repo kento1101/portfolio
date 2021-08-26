@@ -23,10 +23,10 @@
          <th>メールアドレス</th><td><%= @user.email %></td>
         </tr>
         <tr>
-    	 <th>follows</th><td><%= link_to user_followings_path(@user) do %><%= @user.followings.count %><% end %></td>
+    	 <th>follows</th><td><%= link_to followings_path(@user) do %><%= @user.followings.count %><% end %></td>
          </tr>
         <tr>
-	      <th>followers</th><td><%= link_to user_followers_path(@user) do %><%= @user.followers.count %><% end %></td>
+	      <th>followers</th><td><%= link_to followers_path(@user) do %><%= @user.followers.count %><% end %></td>
         </tr>
        </table>
 
@@ -48,10 +48,10 @@
          <th>自己紹介</th><td><%= @user.introduction %></td>
         </tr>
       <tr>
-	   <th>follows</th><td><%= link_to user_followings_path(@user) do %><%= @user.followings.count %><% end %></td>
+	   <th>follows</th><td><%= link_to followings_path(@user) do %><%= @user.followings.count %><% end %></td>
       </tr>
       <tr>
-	   <th>followers</th><td><%= link_to user_followers_path(@user) do %><%= @user.followers.count %><% end %></td>
+	   <th>followers</th><td><%= link_to followers_path(@user) do %><%= @user.followers.count %><% end %></td>
       </tr>
       </table>
 

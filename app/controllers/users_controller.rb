@@ -38,8 +38,18 @@ class UsersController < ApplicationController
  def comments
        comments = Comment.where(user_id: current_user.id).pluck(:style_id)
        commentings = Style.find(comments)
-@comment_styles = Kaminari.paginate_array(commentings).page(params[:page]).per(8)
+      @comment_styles = Kaminari.paginate_array(commentings).page(params[:page]).per(8)
  end
+
+  def followings
+    @user = User.find(params[:id])
+    @users = @user.followings
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.followers
+  end
 
 
 private
